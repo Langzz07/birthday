@@ -1,0 +1,401 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+
+body {
+  background: #Ffc0cb;
+  font-family: "Fredoka One", cursive;
+  overflow-x: hidden;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text {
+  min-width: 500px;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px #2E3847;
+  font-size: 5vh;
+}
+
+.splitting .char {
+  animation: slide-in 1s cubic-bezier(0.5, 0, 0.5, 1) both;
+  animation-delay: calc(60ms * var(--char-index));
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(-1em) rotate(-0.5turn) scale(0.5);
+    opacity: 0;
+  }
+}
+
+.presents {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 300px;
+  width: 500px;
+}
+
+.green {
+  position: relative;
+  left: -20px;
+  width: 100px;
+  height: 100px;
+  z-index: 1;
+}
+
+.green:hover {
+  animation: 0.5s green;
+}
+
+.green .lid {
+  background: #3DDC81;
+}
+
+.green .box {
+  background-image: radial-gradient(#fff 20%, transparent 20%), radial-gradient(#fff 20%, transparent 20%);
+  background-color: #3DDC81;
+}
+
+.green .ribbon {
+  background: #F75D4C;
+}
+
+.green .ribbon::before {
+  top: 21%;
+}
+
+.green .bow {
+  background: #F75D4C;
+}
+
+.green .bow::before, .green .bow::after {
+  background: #F75D4C;
+}
+
+@keyframes green {
+  0% {
+    width: 100px;
+    height: 100px;
+  }
+
+  30% {
+    width: calc(100px + 10px);
+    height: calc(100px - 10px);
+  }
+
+  60% {
+    width: calc(100px - 10px);
+    height: calc(100px + 10px);
+  }
+
+  100% {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.orange {
+  position: relative;
+  left: 20px;
+  width: 130px;
+  height: 120px;
+  z-index: 10;
+}
+
+.orange:hover {
+  animation: 0.5s orange;
+}
+
+.orange .lid {
+  background: #FFA726;
+}
+
+.orange .box {
+  background-image: radial-gradient(#2E3847 20%, transparent 20%), radial-gradient(#2E3847 20%, transparent 20%);
+  background-color: #FFA726;
+}
+
+.orange .ribbon {
+  background: #F75D4C;
+}
+
+.orange .ribbon::before {
+  top: 21%;
+}
+
+.orange .bow {
+  background: #F75D4C;
+}
+
+.orange .bow::before, .orange .bow::after {
+  background: #F75D4C;
+}
+
+@keyframes orange {
+  0% {
+    width: 130px;
+    height: 120px;
+  }
+
+  30% {
+    width: calc(130px + 10px);
+    height: calc(120px - 10px);
+  }
+
+  60% {
+    width: calc(130px - 10px);
+    height: calc(120px + 10px);
+  }
+
+  100% {
+    width: 130px;
+    height: 120px;
+  }
+}
+
+.blue {
+  position: relative;
+  left: 0;
+  width: 120px;
+  height: 160px;
+  z-index: 0;
+}
+
+.blue:hover {
+  animation: 0.5s blue;
+}
+
+.blue .lid {
+  background: #1BB5FE;
+}
+
+.blue .box {
+  background-image: radial-gradient(transparent 20%, transparent 20%), radial-gradient(transparent 20%, transparent 20%);
+  background-color: #1BB5FE;
+}
+
+.blue .ribbon {
+  background: #3DDC81;
+}
+
+.blue .ribbon::before {
+  top: 21%;
+}
+
+.blue .bow {
+  background: #3DDC81;
+}
+
+.blue .bow::before, .blue .bow::after {
+  background: #3DDC81;
+}
+
+@keyframes blue {
+  0% {
+    width: 120px;
+    height: 160px;
+  }
+
+  30% {
+    width: calc(120px + 10px);
+    height: calc(160px - 10px);
+  }
+
+  60% {
+    width: calc(120px - 10px);
+    height: calc(160px + 10px);
+  }
+
+  100% {
+    width: 120px;
+    height: 160px;
+  }
+}
+
+.present {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.present .lid {
+  height: 20%;
+  width: calc(100% + 10px);
+  border: 4px solid #2E3847;
+  border-radius: 3px;
+  box-shadow: inset 1px 2px rgba(255, 255, 255, 0.5), 5px 0 rgba(0, 0, 0, 0.15);
+}
+
+.present .box {
+  width: 100%;
+  height: 100%;
+  background-position: 0 0, 20px 20px;
+  background-size: 40px 40px;
+  border: 4px solid #2E3847;
+  border-top: 0;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  box-shadow: inset -10px 5px rgba(0, 0, 0, 0.3), 5px 0 rgba(0, 0, 0, 0.15);
+}
+
+.present .ribbon {
+  position: absolute;
+  top: -3px;
+  width: 30px;
+  height: calc(100% - 5px);
+  border: 4px solid #2E3847;
+  border-radius: 3px;
+  box-shadow: inset 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+.present .ribbon::before {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.present .bow {
+  position: absolute;
+  top: -20px;
+  width: 20px;
+  height: 20px;
+  border: 4px solid #2E3847;
+  border-radius: 50%;
+  box-shadow: inset 2px 2px rgba(255, 255, 255, 0.5), inset -3px -5px rgba(0, 0, 0, 0.3);
+}
+
+.present .bow::before, .present .bow::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: -10px;
+  width: 30px;
+  height: 30px;
+  border: 4px solid #2E3847;
+  border-radius: 50%;
+  box-shadow: inset 2px 2px rgba(255, 255, 255, 0.5), inset -3px -5px rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+
+.present .bow::before {
+  left: 15px;
+}
+
+.present .bow::after {
+  right: 15px;
+}
+
+.fancy {
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 1.25em 2em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  transition: all 0.3s ease-in-out;
+  user-select: none;
+  font-size: 13px;
+}
+
+.fancy::before {
+  content: " ";
+  width: 1.5625rem;
+  height: 2px;
+  background: rgb(255, 255, 255);
+  top: 50%;
+  left: 1.5em;
+  position: absolute;
+  transform: translateY(-50%);
+  transform-origin: center;
+  transition: background 0.3s linear, width 0.3s linear;
+}
+
+.fancy .text {
+  font-size: 1.125em;
+  line-height: 1.33333em;
+  padding-left: 2em;
+  display: block;
+  text-align: left;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.fancy .top-key {
+  height: 2px;
+  width: 1.5625rem;
+  top: -2px;
+  left: 0.625rem;
+  position: absolute;
+  background: #e8e8e8;
+  transition: width 0.5s ease-out, left 0.3s ease-out;
+}
+
+.fancy .bottom-key-1 {
+  height: 2px;
+  width: 1.5625rem;
+  right: 1.875rem;
+  bottom: -2px;
+  position: absolute;
+  background: #e8e8e8;
+  transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy .bottom-key-2 {
+  height: 1px;
+  width: 0.625rem;
+  right: 0.625rem;
+  bottom: -2px;
+  position: absolute;
+  background: #e8e8e8;
+  transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy:hover {
+  color: white;
+  background: #eb9fac;
+}
+
+.fancy:hover::before {
+  width: 0.9375rem;
+  background: white;
+}
+
+.fancy:hover .text {
+  color: white;
+  padding-left: 1.5em;
+}
+
+.fancy:hover .top-key {
+  left: -2px;
+  width: 0px;
+}
+
+.fancy:hover .bottom-key-1,
+.fancy:hover .bottom-key-2 {
+  right: 0;
+  width: 0;
+}
